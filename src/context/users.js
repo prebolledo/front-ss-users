@@ -1,7 +1,7 @@
 
 export default{
     load: function(){
-        fetch('http://localhost:10000/')
+        fetch(process.env.REACT_APP_ENDPOINT)
         .then(response => response.json())
         .then(json => {
             const users = json.map((item, i) => {
